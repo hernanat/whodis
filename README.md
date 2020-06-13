@@ -24,7 +24,7 @@ Like I said, this particular application is incredibly naive. *DO NOT* use this 
 
 One issue that was immediately apparent was that if you enter in too many keystrokes at a given time,
   and the upper-bound on the random number generator is too high, the program will fail silently
-  and your keystroke patterns will not be varied. I have not figured out a way to make it fail more
+  and your keystroke patterns will not be varied. This is due to having a large number of key events being delayed on the upper-end of the time spectrum, and I suspect that there is an overflow somewhere. I have not figured out a way to make it fail more
   loudly.
 
 The work around here was to tinker with the lower and upper bounds of the random number generator. In reality,
